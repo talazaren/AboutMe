@@ -7,7 +7,7 @@
 
 import UIKit
 
-class LoginViewController: UIViewController {
+final class LoginViewController: UIViewController {
 
     @IBOutlet var userNameTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
@@ -20,7 +20,8 @@ class LoginViewController: UIViewController {
     }
 
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
-        super .touchesBegan(touches, with: event)
+        super.touchesBegan(touches, with: event)
+        self.view.endEditing(true)
     }
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
@@ -31,12 +32,12 @@ class LoginViewController: UIViewController {
             )
             return false
         }
-        
-        // Введенное имя валидно, разрешаем переход
         return true
     }
     
-    @IBAction func logInAction() {
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let welcomeVC = segue.destination as? WelcomeViewController
+        welcomeVC?.welcomeMessage = "Welcome, \(userNameTextField.text ?? "")!"
     }
     
     @IBAction func forgotUserNameAction() {
@@ -47,10 +48,16 @@ class LoginViewController: UIViewController {
         showAlert(withTitle: "Oops!", andMessage: "Your password is 1 😉")
     }
     
+    @IBAction func unwind(for segue: UIStoryboardSegue) {
+        userNameTextField.text = ""
+        passwordTextField.text = ""
+    }
     
     private func showAlert(withTitle title: String, andMessage message: String) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let okAction = UIAlertAction(title: "OK", style: .default)
+        let okAction = UIAlertAction(title: "OK", style: .default) { _ in
+            self.passwordTextField.text = ""
+        }
         
         alert.addAction(okAction)
         present(alert, animated: true)
