@@ -37,7 +37,7 @@
                                                 <state key="normal" title="Button"/>
                                                 <buttonConfiguration key="configuration" style="filled" title="Log In"/>
                                                 <connections>
-                                                    <segue destination="wYF-ty-UkL" kind="presentation" modalPresentationStyle="fullScreen" id="INm-nD-V5Z"/>
+                                                    <segue destination="qJ7-Kv-P2h" kind="presentation" identifier="logInSeque" modalPresentationStyle="fullScreen" id="INm-nD-V5Z"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -90,7 +90,7 @@
             </objects>
             <point key="canvasLocation" x="76" y="-2"/>
         </scene>
-        <!--Welcome View Controller-->
+        <!--Home-->
         <scene sceneID="suE-rp-mUH">
             <objects>
                 <viewController id="wYF-ty-UkL" customClass="WelcomeViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
@@ -99,7 +99,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="nbL-QD-XcZ">
-                                <rect key="frame" x="158" y="180" width="59" height="99.5"/>
+                                <rect key="frame" x="158" y="180" width="59" height="111.5"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IcM-XL-C4B">
                                         <rect key="frame" x="0.0" y="0.0" width="59" height="30"/>
@@ -108,15 +108,15 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="👋" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iv0-iJ-AaQ">
-                                        <rect key="frame" x="8.5" y="55" width="42" height="44.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="37"/>
+                                        <rect key="frame" x="4" y="55" width="51" height="56.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="47"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xjd-uJ-mCJ">
-                                <rect key="frame" x="152.5" y="531" width="70" height="36"/>
+                                <rect key="frame" x="152.5" y="482" width="70" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="Log Out">
@@ -136,6 +136,7 @@
                             <constraint firstItem="nbL-QD-XcZ" firstAttribute="top" secondItem="Cxq-ia-LWI" secondAttribute="top" constant="180" id="tYB-Ll-5bG"/>
                         </constraints>
                     </view>
+                    <tabBarItem key="tabBarItem" title="Home" image="house.fill" catalog="system" id="zgR-fn-TnK"/>
                     <connections>
                         <outlet property="welcomeLabel" destination="IcM-XL-C4B" id="cWD-IT-e3K"/>
                     </connections>
@@ -143,10 +144,189 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="44J-xj-oZ6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="9nk-OY-n6n" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="798" y="-2"/>
+            <point key="canvasLocation" x="798" y="711"/>
+        </scene>
+        <!--Tatiana Lazarenko-->
+        <scene sceneID="ibz-Hj-TZr">
+            <objects>
+                <viewController id="RfH-Mg-2Qt" customClass="UserViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XMA-DX-TE7">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="photo_2024-02-13_17-12-02" translatesAutoresizingMaskIntoConstraints="NO" id="GdT-hD-gwS">
+                                <rect key="frame" x="16" y="96" width="343" height="152"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="GdT-hD-gwS" secondAttribute="height" multiplier="343:152" id="EEb-M4-5bB"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="nFx-PG-Tei">
+                                <rect key="frame" x="16" y="278" width="151" height="112"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="8e9-sJ-g7O">
+                                        <rect key="frame" x="0.0" y="0.0" width="104" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Имя:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iru-fq-dGM">
+                                                <rect key="frame" x="0.0" y="0.0" width="38" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cJf-7F-lgQ">
+                                                <rect key="frame" x="68" y="0.0" width="36" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="N5i-Oj-nYO">
+                                        <rect key="frame" x="0.0" y="30.5" width="143.5" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Фамилия:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vdc-eZ-KMc">
+                                                <rect key="frame" x="0.0" y="0.0" width="77.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AcY-pA-fXh">
+                                                <rect key="frame" x="107.5" y="0.0" width="36" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="HJe-ke-59W">
+                                        <rect key="frame" x="0.0" y="61" width="151" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Занятость:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hMZ-0L-Gqb">
+                                                <rect key="frame" x="0.0" y="0.0" width="85" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rdv-Wr-9II">
+                                                <rect key="frame" x="115" y="0.0" width="36" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="d60-41-8mB">
+                                        <rect key="frame" x="0.0" y="91.5" width="121" height="20.5"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Хобби:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ot6-8X-zFf">
+                                                <rect key="frame" x="0.0" y="0.0" width="55" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UGT-mV-w6M">
+                                                <rect key="frame" x="85" y="0.0" width="36" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="1Zh-Ei-TH6"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="nFx-PG-Tei" firstAttribute="top" secondItem="GdT-hD-gwS" secondAttribute="bottom" constant="30" id="4yr-Sj-NLv"/>
+                            <constraint firstItem="1Zh-Ei-TH6" firstAttribute="trailing" secondItem="GdT-hD-gwS" secondAttribute="trailing" constant="16" id="G9g-ut-usW"/>
+                            <constraint firstItem="GdT-hD-gwS" firstAttribute="leading" secondItem="1Zh-Ei-TH6" secondAttribute="leading" constant="16" id="NT0-Ef-X8Q"/>
+                            <constraint firstItem="GdT-hD-gwS" firstAttribute="top" secondItem="1Zh-Ei-TH6" secondAttribute="top" id="a9H-KM-tg1"/>
+                            <constraint firstItem="nFx-PG-Tei" firstAttribute="leading" secondItem="1Zh-Ei-TH6" secondAttribute="leading" constant="16" id="stn-s4-t4q"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Tatiana Lazarenko" id="ofU-K1-zff">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="ja4-FA-s5C"/>
+                        <barButtonItem key="rightBarButtonItem" title="Bio" id="pi3-GD-ylM">
+                            <connections>
+                                <segue destination="Un7-hu-f8N" kind="show" identifier="BioSeque" id="3Jb-bj-pZi"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rU9-Po-wN5" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2301.5999999999999" y="709.29535232383819"/>
+        </scene>
+        <!--About Tatiana-->
+        <scene sceneID="a12-51-UqN">
+            <objects>
+                <viewController id="Un7-hu-f8N" customClass="BioViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SI1-MR-14A">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="20" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="toa-TD-hc5">
+                                <rect key="frame" x="16" y="106" width="41.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="trT-iR-NlP"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="toa-TD-hc5" firstAttribute="leading" secondItem="trT-iR-NlP" secondAttribute="leading" constant="16" id="LXY-Pu-O1O"/>
+                            <constraint firstItem="toa-TD-hc5" firstAttribute="top" secondItem="trT-iR-NlP" secondAttribute="top" constant="10" id="wBj-X4-3be"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="About Tatiana" id="3A9-Ca-ydJ"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9cJ-qX-Htj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3057" y="710"/>
+        </scene>
+        <!--Tab Bar View Controller-->
+        <scene sceneID="aBG-eu-TUh">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="qJ7-Kv-P2h" customClass="TabBarViewController" customModule="AboutMe" customModuleProvider="target" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="mYu-z3-2cI">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="wYF-ty-UkL" kind="relationship" relationship="viewControllers" id="Xa3-Cz-5Vl"/>
+                        <segue destination="soi-2x-um7" kind="relationship" relationship="viewControllers" id="6s7-D2-n0n"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sNJ-YV-2l2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="797.60000000000002" y="-2.2488755622188905"/>
+        </scene>
+        <!--Tatiana-->
+        <scene sceneID="1G3-DY-sYL">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="soi-2x-um7" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Tatiana" image="person.fill" catalog="system" id="HAu-dg-3pc"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="3JA-0p-1F2">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="RfH-Mg-2Qt" kind="relationship" relationship="rootViewController" id="5di-yD-BA3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AnD-Aj-yQr" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1575" y="710"/>
         </scene>
     </scenes>
     <resources>
+        <image name="house.fill" catalog="system" width="128" height="104"/>
+        <image name="person.fill" catalog="system" width="128" height="120"/>
+        <image name="photo_2024-02-13_17-12-02" width="1280" height="853"/>
         <systemColor name="opaqueSeparatorColor">
             <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
