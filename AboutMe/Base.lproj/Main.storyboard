@@ -3,7 +3,6 @@
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22131"/>
-        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -18,10 +17,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="Rwh-jB-beo">
-                                <rect key="frame" x="30" y="250" width="315" height="167"/>
+                                <rect key="frame" x="30" y="216" width="315" height="171.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="Bqj-eV-pob">
-                                        <rect key="frame" x="0.0" y="0.0" width="315" height="122"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="315" height="126.5"/>
                                         <subviews>
                                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="User Name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oUi-Jr-BKT">
                                                 <rect key="frame" x="0.0" y="0.0" width="315" height="34"/>
@@ -33,20 +32,18 @@
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" secureTextEntry="YES" textContentType="password"/>
                                             </textField>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GVf-Tt-Zd7">
-                                                <rect key="frame" x="0.0" y="92" width="315" height="30"/>
-                                                <color key="backgroundColor" name="AccentColor"/>
-                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
-                                                <state key="normal" title="Log In"/>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHb-Q6-lXZ">
+                                                <rect key="frame" x="0.0" y="92" width="315" height="34.5"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Log In"/>
                                                 <connections>
-                                                    <segue destination="wYF-ty-UkL" kind="presentation" modalPresentationStyle="fullScreen" id="RC6-uT-dJm"/>
+                                                    <segue destination="wYF-ty-UkL" kind="presentation" modalPresentationStyle="fullScreen" id="INm-nD-V5Z"/>
                                                 </connections>
                                             </button>
                                         </subviews>
                                     </stackView>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="59" translatesAutoresizingMaskIntoConstraints="NO" id="bSh-k0-R4r">
-                                        <rect key="frame" x="0.0" y="137" width="315" height="30"/>
+                                        <rect key="frame" x="0.0" y="141.5" width="315" height="30"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9TJ-zn-KAJ">
                                                 <rect key="frame" x="0.0" y="0.0" width="133" height="30"/>
@@ -81,11 +78,10 @@
                             <constraint firstItem="Rwh-jB-beo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="0Ix-08-XcR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Rwh-jB-beo" secondAttribute="trailing" constant="30" id="Aee-nk-eyV"/>
                             <constraint firstItem="Rwh-jB-beo" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="KMx-we-PMW"/>
-                            <constraint firstItem="Rwh-jB-beo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="vCm-B5-96V"/>
+                            <constraint firstItem="Rwh-jB-beo" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-32" id="vCm-B5-96V"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="logInButton" destination="GVf-Tt-Zd7" id="aN9-zQ-B1J"/>
                         <outlet property="passwordTextField" destination="LJ7-JS-riM" id="Vff-s7-TsN"/>
                         <outlet property="userNameTextField" destination="oUi-Jr-BKT" id="CFO-zc-w76"/>
                     </connections>
@@ -132,7 +128,7 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Cxq-ia-LWI"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                         <constraints>
                             <constraint firstItem="Cxq-ia-LWI" firstAttribute="bottom" secondItem="Xjd-uJ-mCJ" secondAttribute="bottom" constant="100" id="0hz-1a-JMD"/>
                             <constraint firstItem="Xjd-uJ-mCJ" firstAttribute="centerX" secondItem="zHE-py-Ry2" secondAttribute="centerX" id="3NF-rE-rvg"/>
@@ -141,7 +137,6 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="backgroundGradientView" destination="zHE-py-Ry2" id="ezp-zf-gw2"/>
                         <outlet property="welcomeLabel" destination="IcM-XL-C4B" id="cWD-IT-e3K"/>
                     </connections>
                 </viewController>
@@ -152,9 +147,9 @@
         </scene>
     </scenes>
     <resources>
-        <namedColor name="AccentColor">
-            <color red="0.0" green="0.46000000000000002" blue="0.89000000000000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-        </namedColor>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
