@@ -16,5 +16,6 @@ final class TabBarViewController: UITabBarController {
         tabBarAppearance.configureWithOpaqueBackground()
         
         tabBar.standardAppearance = tabBarAppearance
+        tabBar.backgroundColor = .white
     }
 }
